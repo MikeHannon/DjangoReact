@@ -5,7 +5,7 @@ class View extends React.Component {
   render() {
     return (
       <div>
-        <p>Hello World {this.props.token}</p>
+        <p>Hello World </p>
       </div>
     )
   }

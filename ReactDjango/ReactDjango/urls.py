@@ -13,8 +13,9 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
-from rest_framework.authtoken import views as drf_views
+from django.conf.urls import url, include
+
 urlpatterns = [
-    url(r'^auth$', drf_views.obtain_auth_token, name='auth'),
+    url(r'^', include('api.urls', namespace='api', app_name='api')),
+    url(r'^', include('snippets.urls')),
 ]
